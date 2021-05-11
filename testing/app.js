@@ -98,25 +98,39 @@
 // This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 // ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  let newBuzz = [];
+// const fizzbuzz = (arr) => {
+//   let newBuzz = [];
 
-  arr.forEach(function(currentNum, idx){
-    if (currentNum % 3 == 0){
-      if ((currentNum % 3 == 0) && (currentNum % 5 ==0)){
-        newBuzz.push("Fizz Buzz");
-      } else {
-        newBuzz.push("Fizz");
-      }
-    } else if (currentNum % 5 == 0){
-      newBuzz.push("Buzz");
-    } else {
-      newBuzz.push(currentNum)
-    }
-  }); 
-  console.log(newBuzz);
-  return newBuzz;
-};
+//   arr.forEach(function(currentNum, idx){
+//     if (currentNum % 3 == 0){
+//       if ((currentNum % 3 == 0) && (currentNum % 5 ==0)){
+//         newBuzz.push("Fizz Buzz");
+//       } else {
+//         newBuzz.push("Fizz");
+//       }
+//     } else if (currentNum % 5 == 0){
+//       newBuzz.push("Buzz");
+//     } else {
+//       newBuzz.push(currentNum)
+//     }
+//   }); 
+//   console.log(newBuzz);
+//   return newBuzz;
+// };
 
 
-fizzbuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
+// fizzbuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
+
+const numbers = [1,2,3,4,5];
+
+
+// const newArray = numbers.map(number => {
+//   let multipliedNumber = number * number;
+//   return multipliedNumber; 
+// })
+
+const newArray = numbers.map(item => item*item)
+
+console.log(newArray);
+
+
