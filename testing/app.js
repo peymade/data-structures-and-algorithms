@@ -121,16 +121,16 @@
 
 // fizzbuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
 
-const numbers = [1,2,3,4,5];
+// const numbers = [1,2,3,4,5];
 
 
-// const newArray = numbers.map(number => {
-//   let multipliedNumber = number * number;
-//   return multipliedNumber; 
-// })
+// // const newArray = numbers.map(number => {
+// //   let multipliedNumber = number * number;
+// //   return multipliedNumber; 
+// // })
 
-const newArray = numbers.map(item => item*item)
+// const newArray = numbers.map(item => item*item)
 
-console.log(newArray);
+// console.log(newArray);
 
 
