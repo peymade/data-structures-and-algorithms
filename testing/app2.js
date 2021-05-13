@@ -1,42 +1,11 @@
-const snorlaxStats = {
-  stats: [
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed',
-      },
-      effort: 5,
-      baseStat: 30,
-    },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense',
-      },
-      effort: 2,
-      baseStat: 110,
-    },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack',
-      },
-      effort: 9,
-      baseStat: 65,
-    },
-  ],
-  name: 'snorlax',
-  weight: 4600,
-};
+const numbers = [1,2,3,4,5]
 
-const extractStats = (arr) => {
-  let newStatsArray = arr.map(function(value, idx){
-    
-    let YEET = value.effort + value.baseStat;
-    return {name: value.stat.name, total: YEET};
-  }); 
-  console.log(newStatsArray);
-  return newStatsArray;
-}
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
 
-extractStats(snorlaxStats.stats);
+console.log(evenNumbers);
+
+const kids = family.filter((member) => {
+  if(member.role === 'kid') {
+    return true; // True ends up in array
+  } return false; // False gets filtered out
+});
