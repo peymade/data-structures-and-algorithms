@@ -98,3 +98,29 @@ const getStatName = (arr, minBaseStatz) => {
 };
 
 console.log(getStatName(snorlaxData.stats, 50));
+
+
+
+
+let people = [
+  {name: 'Jacob', age: 31},
+  {name: 'Chance', age: 38},
+  {name: 'Hexx', age: 28},
+]
+
+
+// -1 moves lower
+// 1 moves upper
+// 0 stays same
+
+people.sort ((a,b) => {
+  if (a.age > b.age) {
+    return -1;
+  } else if (a.age < b.age) {
+    return 1;
+  } else {
+    return 0;
+  }
+}); 
+
+console.log(people);
