@@ -1,73 +1,61 @@
-// let numbers = [1,2,3,4,5];
+let starWarsData = [{
+  name: 'Luke Skywalker',
+  height: '172',
+  mass: '77',
+  hair_color: 'blond',
+  skin_color: 'fair',
+  eye_color: 'blue',
+  birth_year: '19BBY',
+  gender: 'male',
+},
+{
+  name: 'C-3PO',
+  height: '167',
+  mass: '75',
+  hair_color: 'n/a',
+  skin_color: 'gold',
+  eye_color: 'yellow',
+  birth_year: '112BBY',
+  gender: 'n/a'
+},
+{
+  name: 'R2-D2',
+  height: '96',
+  mass: '32',
+  hair_color: 'n/a',
+  skin_color: 'white, blue',
+  eye_color: 'red',
+  birth_year: '33BBY',
+  gender: 'n/a'
+},
+{
+  name: 'Darth Vader',
+  height: '202',
+  mass: '136',
+  hair_color: 'none',
+  skin_color: 'white',
+  eye_color: 'yellow',
+  birth_year: '41.9BBY',
+  gender: 'male'
+},
+{
+  name: 'Leia Organa',
+  height: '150',
+  mass: '49',
+  hair_color: 'brown',
+  skin_color: 'light',
+  eye_color: 'brown',
+  birth_year: '19BBY',
+  gender: 'female'
+}];
 
-// for (let i = 0; i< numbers.length; i++){
-//   for(let j=0; j<numbers.length; j++){
-//     console.log('we looped')
-//   }
-// }
-
-
-// let people = ['jacob', 'chance', 'hexx', 'kristian']; 
-
-// function shakeHands() {
-
-//   let current = '';
-//   let secondcurrent = ''; 
-
-//   for(let i = 0; i< people.length; i++){
-
-//     current = people[i];
-
-//     for(let j=0; j<people.length; j++){
-
-//       secondcurrent = people[j];
-//       if(current === secondcurrent){
-//         console.log('NO')
-//       } else {
-//         console.log('ok');
-//       }
-//       console.log('shook');
-//     }
-//   } 
-// }
-
-// console.log(shakeHands(people));
-
-
-
-// function returnTen(str){
-//   var splitArray = str.split('');
-//   var sliceArray = splitArray.slice(Math.max(splitArray.length-10,0))
-//   return sliceArray;
-//  }
-
- 
-//  console.log(returnTen('hello world'))
-
-
-
-
-const errands = [
-  {
-    store: 'Grocery store',
-    items: [{ name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }]
-  },
-  {
-    store: 'Drug store',
-    items: [{ name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash', quantity: 1 }]
-  },
-  {
-    store: 'Pet store',
-    items: [{ name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 }]
-  }
-];
-
-const howManyTreats = (arr) => {
-
-treatNum = arr[2].items[1].quantity;
-  return treatNum;
+let findShortest = (data) => {
+  let height = data.reduce((x,y) => (Number(x.height) < Number(y.height) ? x : y)); console.log(height.name);
+  return height.name;
 };
 
 
 
-console.log(howManyTreats(errands));
+console.log(findShortest(starWarsData));
+
+
