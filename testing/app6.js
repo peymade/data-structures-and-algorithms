@@ -1,61 +1,34 @@
-let starWarsData = [{
-  name: 'Luke Skywalker',
-  height: '172',
-  mass: '77',
-  hair_color: 'blond',
-  skin_color: 'fair',
-  eye_color: 'blue',
-  birth_year: '19BBY',
-  gender: 'male',
-},
-{
-  name: 'C-3PO',
-  height: '167',
-  mass: '75',
-  hair_color: 'n/a',
-  skin_color: 'gold',
-  eye_color: 'yellow',
-  birth_year: '112BBY',
-  gender: 'n/a'
-},
-{
-  name: 'R2-D2',
-  height: '96',
-  mass: '32',
-  hair_color: 'n/a',
-  skin_color: 'white, blue',
-  eye_color: 'red',
-  birth_year: '33BBY',
-  gender: 'n/a'
-},
-{
-  name: 'Darth Vader',
-  height: '202',
-  mass: '136',
-  hair_color: 'none',
-  skin_color: 'white',
-  eye_color: 'yellow',
-  birth_year: '41.9BBY',
-  gender: 'male'
-},
-{
-  name: 'Leia Organa',
-  height: '150',
-  mass: '49',
-  hair_color: 'brown',
-  skin_color: 'light',
-  eye_color: 'brown',
-  birth_year: '19BBY',
-  gender: 'female'
-}];
 
-let findShortest = (data) => {
-  let height = data.reduce((x,y) => (Number(x.height) < Number(y.height) ? x : y)); console.log(height.name);
-  return height.name;
+const replaceZeros = (string) => {
+  const zeros = /[0]/g;
+  const replace = 'zero';
+
+  console.log(zeros);
+
+  let newString = string.replace(zeros, replace);
+
+  return newString;
+}
+
+console.log(replaceZeros('hey0 hey0'));
+
+
+
+const isCapitalized = (str) => {
+  const capMatch = /\b[A-Z][a-z]+/g;
+  const array = str.match(capMatch) || [];
+  return array;
 };
 
+console.log(isCapitalized('momom Momo'))
 
+const validateWord = (word) => {
+  if(( /^[a-zA-Z]{5,10}$/.test(word))){
+    return true;
+  } else {
+    return false
+  }
 
-console.log(findShortest(starWarsData));
+};
 
-
+console.log(validateWord('mo'));
