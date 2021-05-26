@@ -1,34 +1,36 @@
+const allHappy = (arr) => {
+  let findMatch = /^:\)/g;
+  let secMatch = /:\)/g
+  let returnVal = false;
 
-const replaceZeros = (string) => {
-  const zeros = /[0]/g;
-  const replace = 'zero';
+  
+    let matches = arr.filter(phrase => {
+      if( (secMatch.test(phrase))|| (findMatch.test(phrase))){
+        return phrase;
+      } 
+    });
 
-  console.log(zeros);
-
-  let newString = string.replace(zeros, replace);
-
-  return newString;
-}
-
-console.log(replaceZeros('hey0 hey0'));
-
-
-
-const isCapitalized = (str) => {
-  const capMatch = /\b[A-Z][a-z]+/g;
-  const array = str.match(capMatch) || [];
-  return array;
-};
-
-console.log(isCapitalized('momom Momo'))
-
-const validateWord = (word) => {
-  if(( /^[a-zA-Z]{5,10}$/.test(word))){
-    return true;
+  if(matches.length === arr.length){
+    returnVal = true;
   } else {
-    return false
+    returnVal = false;
   }
-
+  return returnVal;
 };
 
-console.log(validateWord('mo'));
+
+
+// const findHappiness = (arr) => {
+//   let findMatch = /^:\)/g;
+//   let secMatch = /:\)/g
+
+//   let matches = arr.filter(phrase => {
+//     if( (secMatch.test(phrase))|| (findMatch.test(phrase))){
+//       return phrase;
+//     } 
+//   }); return matches;
+
+// };
+
+
+console.log(allHappy(['apple (:)', ':)banana', 'cant:)aloupe']))
